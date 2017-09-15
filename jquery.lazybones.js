@@ -24,7 +24,7 @@
   if ($) {
     $.extend({
       lazybones: function (options) {
-        _lazybones(options);
+        lazybones(options);
       }
     });
   }

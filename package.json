@@ -2,7 +2,7 @@
   "name": "lazybones",
   "version": "1.0.0",
   "description": "用于实现图片懒加载（分页加载）的 jQuery 插件",
-  "main": "lazybones.js",
+  "main": "jquery.lazybones.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
