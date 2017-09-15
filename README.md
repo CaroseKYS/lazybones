@@ -7,7 +7,7 @@
 
 ## 使用
 
-### 作为jQuery扩展插件
+#### 作为jQuery扩展插件
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="../jquery.lazybones.js"></script>
     <script>
@@ -16,19 +16,19 @@
       });
     </script>
 
-### 作为CMD模块
+#### 作为CMD模块
     var lazybones = require('../jquery.lazybones.js');
     lazybones();
 
-### 作为AMD模块
+#### 作为AMD模块
     define('test', ['../jquery.lazybones.js'], function(lazybones){
       lazybones();
     });
 
 
 ## API
-### isListening
-### getRemains
-### load
-### stopListening
-### beginListening
+#### isListening
+#### getRemains
+#### load
+#### stopListening
+#### beginListening
