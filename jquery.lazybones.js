@@ -52,6 +52,8 @@
     getGroup($eles);
 
     params.autoBegin && lazybones.beginListening();
+
+    return lazybones;
   }
 
   lazybones.isListening = function () {
