@@ -35,21 +35,21 @@
 ## API
 
 #### lazybones
-+ 方法说明: 初始化
++ 方法说明: 用于初始化，将所有的符合条件的图片进行登记，并进行懒加载
 
 + 参数列表: 该方法接受一个 `json` 对象作为参数, `json` 对象支持的属性如下
-    * attr:      `String` 类型，可选参数，指定 `img` 真实路径的属性名称，默认为`data-lazybones-url`。
-    * event:     `String` 类型，可选参数，触发自动计算并加载图片的默认事件名，默认为 `scroll`。
+    * attr:      `String` 类型，可选参数，指定 `img` 真实路径的属性名称，默认为`data-lazybones-url`，有该属性的图片才会被组件登记并进行懒加载。
+    * event:     `String` 类型，可选参数，触发自动计算并加载图片的事件名，默认为 `scroll`。
     * container: `Object` 类型，可选参数，用于指定触发 `event` 事件的容器对象，默认为 `Window`。
     * callback:  `Function` 类型，可选参数，每一次计算并加载图片之后的回调函数。
-    * autoBegin:  `Boolean` 类型，可选参数，是否自动开始监听事件，默认为 `true`。
+    * autoBegin:  `Boolean` 类型，可选参数，初始化之后是否自动开始监听事件，默认为 `true`。
 
 + 返回值
     * 类型: `Object`
     * 说明: 返回 **api** 自身，方便链式调用。
 
 #### isListening
-+ 方法说明: 用于判断组件是否处于监听状态
++ 方法说明: 用于判断是否处于监听状态
 
 + 参数列表: 无
 
