@@ -8,6 +8,10 @@
 ## 使用
 
 #### 作为jQuery扩展插件
+    <html>
+    <body>
+      <img src="http://www.gratisography.com/img/rabbit.gif" data-lazybones-url="http://www.gratisography.com/pictures/429_1.jpg">
+    </body>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="../jquery.lazybones.js"></script>
     <script>
@@ -15,11 +19,6 @@
         $.lazybones();
       });
     </script>
-    
-    <html>
-    <body>
-      <img src="http://www.gratisography.com/img/rabbit.gif" data-lazybones-url="http://www.gratisography.com/pictures/429_1.jpg">
-    </body>
     </html>
 
 
@@ -39,11 +38,11 @@
 + 方法说明: 初始化
 
 + 参数列表: 该方法接受一个 `json` 对象作为参数, `json` 对象支持的属性如下
-    * attr:      `String` 类型，可选参数，指定 `img` 真实路径的属性名称，默认为`` 接收消息的目标窗口。
-    * event:     `String/Object` 类型，必选参数，需要发送的消息。
-    * container: `Function` 类型，可选参数，当消息得到回复时的回调函数。
-    * callback:  `Number` 类型，可选参数，当前消息收到回复之前等待的毫秒数，若不指定则使用默认值(5分钟)。
-    * autoBegin:  `Number` 类型，可选参数，当前消息收到回复之前等待的毫秒数，若不指定则使用默认值(5分钟)。
+    * attr:      `String` 类型，可选参数，指定 `img` 真实路径的属性名称，默认为`data-lazybones-url`。
+    * event:     `String` 类型，可选参数，触发自动计算并加载图片的默认事件名，默认为 `scroll`。
+    * container: `Object` 类型，可选参数，用于指定触发 `event` 事件的容器对象，默认为 `Window`。
+    * callback:  `Function` 类型，可选参数，每一次计算并加载图片之后的回调函数。
+    * autoBegin:  `Boolean` 类型，可选参数，是否自动开始监听事件，默认为 `true`。
 
 + 返回值
     * 类型: `Object`
