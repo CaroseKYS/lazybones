@@ -15,6 +15,13 @@
         $.lazybones();
       });
     </script>
+    
+    <html>
+    <body>
+      <img src="http://www.gratisography.com/img/rabbit.gif" data-lazybones-url="http://www.gratisography.com/pictures/429_1.jpg">
+    </body>
+    </html>
+
 
 #### 作为CMD模块
     var lazybones = require('../jquery.lazybones.js');
@@ -27,8 +34,64 @@
 
 
 ## API
+
+#### lazybones
++ 方法说明: 初始化
+
++ 参数列表: 该方法接受一个 `json` 对象作为参数, `json` 对象支持的属性如下
+    * attr:      `String` 类型，可选参数，指定 `img` 真实路径的属性名称，默认为`` 接收消息的目标窗口。
+    * event:     `String/Object` 类型，必选参数，需要发送的消息。
+    * container: `Function` 类型，可选参数，当消息得到回复时的回调函数。
+    * callback:  `Number` 类型，可选参数，当前消息收到回复之前等待的毫秒数，若不指定则使用默认值(5分钟)。
+    * autoBegin:  `Number` 类型，可选参数，当前消息收到回复之前等待的毫秒数，若不指定则使用默认值(5分钟)。
+
++ 返回值
+    * 类型: `Object`
+    * 说明: 返回 **api** 自身，方便链式调用。
+
 #### isListening
++ 方法说明: 用于判断组件是否处于监听状态
+
++ 参数列表: 无
+
++ 返回值
+    * 类型: `Boolean`
+    * 说明: 是否处于监听状态。
+    
 #### getRemains
++ 方法说明: 获取尚未被加载的图片数量
+
++ 参数列表: 无
+
++ 返回值
+    * 类型: `Number`
+    * 说明: 尚未被加载的图片数量。
+
 #### load
++ 方法说明: 向指定对象(窗口)发送消息
+
++ 参数列表:
+    * elements: `Array` 数组，可选参数，需要选择加载的图片集合，如果没有该参数，则对所有的图片位置进行计算，选择性加载。
+    * callback: `Function` 类型，可选参数，选择性加载图片之后的回调函数。
+
++ 返回值
+    * 类型: `Boolean`
+    * 说明: 是否成功加载了图片。
+
 #### stopListening
++ 方法说明: 停止事件监听，即停止尚未加载图片的加载
+
++ 参数列表: 无
+
++ 返回值
+    * 类型: `Object`
+    * 说明: 返回 **api** 自身，方便链式调用。
+
 #### beginListening
++ 方法说明: 开始事件监听，即对尚未加载图片重新启动按需加载
+
++ 参数列表: 无
+
++ 返回值
+    * 类型: `Boolean`
+    * 说明: 是否重启成功，或者是否需要重启。比如所有图片已经被加载或者正在监听中的话就不需要重启。
